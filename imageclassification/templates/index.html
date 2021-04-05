@@ -6,18 +6,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <style>
             body{
-     
-        background-image: url('static/img.jpg');
+        background-image: url("/static/backgrounds/{{ background }}");
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
-    }
-
+        }
+        h1 {
+            left: 0;
+            line-height: 200px;
+            margin-top: -90px;
+            position: absolute;
+            text-align: center;
+            top: 40%;
+            width: 100%;
+        }
         </style>
     </head>
 
     <body>
-        Content goes here
+        
+        <h1 style="font-size:100px; color:white;">Text goes here</h1>
+
     </body>
 </html>
