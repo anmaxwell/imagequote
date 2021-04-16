@@ -1,6 +1,6 @@
 # imagequote
 
-This is part 2 of a 3 part project to get experience and exposure of using APIs, classification and text generation. 
+This is part 3 of a 3 part project to get experience and exposure of using APIs, classification and text generation. 
 
 Part 1 is the Quotemaker.  This uses pre trained GPT2 to auto generate motivational quotes after being fine tuned on existing quotes.  If the generated quote is voted good by the reader, it is pushed to the API and added to the training list.  If not it's simply ignored.
 
