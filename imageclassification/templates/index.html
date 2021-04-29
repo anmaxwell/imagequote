@@ -1,32 +1,49 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <style>
-            body{
-        background-image: url("/static/backgrounds/{{ background }}");
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        }
-        h1 {
-            left: 0;
-            line-height: 200px;
-            margin-top: -90px;
-            position: absolute;
-            text-align: center;
-            top: 40%;
-            width: 100%;
-        }
-        </style>
-    </head>
+<!DOCTYPE html>
+<!--
+Template Name: Luthum
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
+<html>
+<head>
+<title>QuoteMaker</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/layout.css') }}">
+</head>
 
-    <body>
-        
-        <h1 style="font-size:100px; color:white;">Text goes here</h1>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- Top Background Image Wrapper -->
+<div class="bgded overlay" style="height:100%; background-image:url('static/backgrounds/{{ background }}');"> 
+  <!-- ################################################################################################ -->
+  <div class="wrapper row1">
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div id="pageintro" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <article>
+      <h2 class="heading" style="font-style:italic;"> "{{ text }}"</h2>
 
-    </body>
+      <footer>
+        <ul class="nospace inline pushright">
+          <li><a class="btn inverse" href="#">Love It</a></li>
+          <li><a class="btn inverse" href="{{ url_for('index') }}">Hate It</a></li>
+        </ul>
+      </footer>
+
+    </article>
+
+    <!-- ################################################################################################ -->
+  </div>
+  <!-- ################################################################################################ -->
+</div>
+<!-- End Top Background Image Wrapper -->
+
+
+</body>
 </html>
