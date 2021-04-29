@@ -31,7 +31,7 @@ Licence URI: http://www.os-templates.com/template-terms
 
       <footer>
         <ul class="nospace inline pushright">
-          <li><a class="btn inverse" href="#">Love It</a></li>
+          <li><a class="btn inverse" href="{{ url_for('add_quote', background=background, text=text) }}">Love It</a></li>
           <li><a class="btn inverse" href="{{ url_for('index') }}">Hate It</a></li>
         </ul>
       </footer>
