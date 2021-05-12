@@ -1,15 +1,11 @@
-import tensorflow as tf
 import tensorflow_hub as hub
-import csv
-import string
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 
-def image_select():
+def image_select(text:str):
 
     df = pd.read_csv('imageclassification/imagequotes.csv')
-    text = 'As human beings our greatness lies not so much in being able to remake the world - that is the myth of the atomic age - as in being able to remake ourselves.'
 
     module_url = 'https://tfhub.dev/google/universal-sentence-encoder/4'
     model = hub.load(module_url)

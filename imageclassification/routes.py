@@ -2,15 +2,24 @@ from imageclassification import app
 from imageclassification.imagemodel import image_select
 from flask import render_template, redirect, url_for
 import csv
+import requests
 
 @app.route('/') #Page to display quote and image
 def index():
 
-    #prediction, text = image_select()
-    #background = "%s%s" % (prediction[0], '.jpg')
+    scheme = 'http'
+    uri = '127.0.0.1'
+    port = 5000
 
-    text = 'As human beings our greatness lies not so much in being able to remake the world - that is the myth of the atomic age - as in being able to remake ourselves.'
-    background = '1.jpg'
+    url = f'{scheme}://{uri}:{port}/api/quote'
+
+    quote = requests.get(url)
+    quote.raise_for_status()
+    text = quote.json()['quote']
+
+    prediction, text = image_select(text)
+    background = "%s%s" % (prediction[0], '.jpg')
+    #background = '1.jpg'
 
     return render_template('index.html', background=background, text=text)
 
